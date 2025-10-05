@@ -15,17 +15,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      /* Paleta escura moderna com acentos em verde UFAM/azul */
-      --bg:#0b1320;           /* azul petróleo escuro */
-      --fg:#eaf2ff;           /* texto claro */
-      --muted:#b7c4dc;        /* texto secundário */
-      --brand:#1dbf73;        /* verde acento */
-      --accent:#7aa6ff;       /* azul acento */
-      --card:#101b31;         /* fundo cartões */
-      --line:#223357;         /* linhas */
+      /* Tema CLARO (UFAM-friendly) */
+      --bg:#ffffff;          /* fundo branco */
+      --fg:#0e1a2e;          /* texto principal (azul petróleo bem escuro) */
+      --muted:#445671;       /* texto secundário */
+      --brand:#1dbf73;       /* verde acento (CTA) */
+      --accent:#1b63d1;      /* azul link */
+      --card:#f6f8fb;        /* cartões claros */
+      --line:#d6deea;        /* linhas sutis */
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      background: var(--bg);
+      color:var(--fg); line-height:1.65;
+    }
     body{
       margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
       background: radial-gradient(1200px 600px at 80% -10%, #14294d55 0, transparent 60%),
@@ -39,7 +43,7 @@
 
     /* Header */
     header{position:sticky; top:0; z-index:20; backdrop-filter:saturate(140%) blur(8px);
-      background:linear-gradient(180deg, #0b1320cc, #0b1320b0 60%, transparent); border-bottom:1px solid var(--line)}
+      background:rgba(255,255,255,.85); border-bottom:1px solid var(--line)}
     .bar{display:flex; align-items:center; gap:16px; padding:12px 24px}
     .logo{display:flex; align-items:center; gap:14px; font-weight:800}
     .logo img{width:40px; height:40px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #ffffff12}
@@ -58,7 +62,7 @@
     .hero h1{margin:0 0 8px; font-size:clamp(28px, 4.2vw, 44px); line-height:1.15}
     .hero p{margin:0; color:var(--muted)}
     .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .badge{background:#12233f; color:#cfe0ff; border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:12px}
+    .badge{background:#edf2fa; color:#22406f; border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:12px}
     .hero .emblem{justify-self:center}
     .emblem img{width:min(200px, 45vw); height:auto; border-radius:18px; border:1px solid var(--line); background:#0f1a2e}
     @media (min-width: 900px){
@@ -69,7 +73,7 @@
     /* Cards / layout */
     .grid{display:grid; grid-template-columns:1fr; gap:18px; margin-top:28px}
     @media (min-width: 900px){ .grid{grid-template-columns:1.2fr .8fr} }
-    .card{background:linear-gradient(180deg, #0f1a2e, #0d1626); border:1px solid var(--line); border-radius:16px; padding:20px}
+    .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px}
     .card h2{margin:0 0 10px; font-size:20px}
     .list{padding-left:18px; margin:8px 0}
 
@@ -85,10 +89,10 @@
     details + details{margin-top:12px}
     .table{width:100%; border-collapse:collapse; font-size:14px}
     .table th,.table td{border:1px solid var(--line); padding:10px 12px; text-align:left}
-    .table th{background:#0e1b2e}
+    .table th{background:#e9f0fb}
     .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:13px; color:#d7e3ff}
 
-    .footer{color:#a8bbd8; border-top:1px dashed var(--line); margin-top:36px; padding:18px 0 32px; font-size:14px}
+    .footer{color:#3b4a63; border-top:1px dashed var(--line); margin-top:36px; padding:18px 0 32px; font-size:14px}
   </style>
 </head>
 <body>
