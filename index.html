@@ -1,23 +1,239 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <title>LAEF • Edital 01/2025</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>LAEF • Edital 01/2025 – Seleção de Ligantes</title>
+  <meta name="description" content="Edital 01/2025 da Liga Acadêmica de Ensino de Física (LAEF) – ISB/UFAM. Inscrições, cronograma, critérios e link do formulário."/>
+  <meta property="og:title" content="LAEF • Edital 01/2025 – Seleção de Ligantes"/>
+  <meta property="og:description" content="Inscrições 06–17/out/2025 • Seleção 24/out às 15h • 15 vagas + lista de espera."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="pt_BR"/>
+  <link rel="icon" href="laef-logo.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.6}
-    a.btn{display:inline-block;padding:12px 18px;border-radius:10px;background:#21c0a5;color:#06251f;font-weight:700;text-decoration:none}
-    a.btn:focus, a.btn:hover{outline:2px solid #0d8;outline-offset:2px}
+    :root{
+      /* Paleta escura moderna com acentos em verde UFAM/azul */
+      --bg:#0b1320;           /* azul petróleo escuro */
+      --fg:#eaf2ff;           /* texto claro */
+      --muted:#b7c4dc;        /* texto secundário */
+      --brand:#1dbf73;        /* verde acento */
+      --accent:#7aa6ff;       /* azul acento */
+      --card:#101b31;         /* fundo cartões */
+      --line:#223357;         /* linhas */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%, #14294d55 0, transparent 60%),
+                  radial-gradient(800px 400px at 10% -20%, #154b3f55 0, transparent 60%),
+                  var(--bg);
+      color:var(--fg); line-height:1.65;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1080px; margin:0 auto; padding:24px}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:20; backdrop-filter:saturate(140%) blur(8px);
+      background:linear-gradient(180deg, #0b1320cc, #0b1320b0 60%, transparent); border-bottom:1px solid var(--line)}
+    .bar{display:flex; align-items:center; gap:16px; padding:12px 24px}
+    .logo{display:flex; align-items:center; gap:14px; font-weight:800}
+    .logo img{width:40px; height:40px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px #ffffff12}
+    .logo span{letter-spacing:.2px}
+    .pill{padding:6px 10px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--muted)}
+    .cta{margin-left:auto}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:14px;
+      background:linear-gradient(180deg, var(--brand), #14995c); color:#062b18; font-weight:800; border:none;
+      box-shadow:0 8px 24px #1dbf7333, inset 0 -2px 0 #0c804e; cursor:pointer; transition:transform .08s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+
+    /* Hero */
+    .hero{padding:64px 24px 24px; display:grid; grid-template-columns:1fr; gap:20px; align-items:center}
+    .hero h1{margin:0 0 8px; font-size:clamp(28px, 4.2vw, 44px); line-height:1.15}
+    .hero p{margin:0; color:var(--muted)}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .badge{background:#12233f; color:#cfe0ff; border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:12px}
+    .hero .emblem{justify-self:center}
+    .emblem img{width:min(200px, 45vw); height:auto; border-radius:18px; border:1px solid var(--line); background:#0f1a2e}
+    @media (min-width: 900px){
+      .hero{grid-template-columns:1.2fr .8fr}
+      .hero .emblem{justify-self:end}
+    }
+
+    /* Cards / layout */
+    .grid{display:grid; grid-template-columns:1fr; gap:18px; margin-top:28px}
+    @media (min-width: 900px){ .grid{grid-template-columns:1.2fr .8fr} }
+    .card{background:linear-gradient(180deg, #0f1a2e, #0d1626); border:1px solid var(--line); border-radius:16px; padding:20px}
+    .card h2{margin:0 0 10px; font-size:20px}
+    .list{padding-left:18px; margin:8px 0}
+
+    /* Timeline */
+    .timeline{position:relative; padding-left:20px; margin:0}
+    .timeline::before{content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px; background:var(--line)}
+    .tl{position:relative; padding-left:18px; margin:14px 0}
+    .tl::before{content:""; position:absolute; left:-2px; top:.45em; width:10px; height:10px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px #7aa6ff22}
+
+    /* Tables / details */
+    details{background:#0e192b; border:1px solid var(--line); border-radius:12px; padding:14px 16px}
+    summary{cursor:pointer; font-weight:600}
+    details + details{margin-top:12px}
+    .table{width:100%; border-collapse:collapse; font-size:14px}
+    .table th,.table td{border:1px solid var(--line); padding:10px 12px; text-align:left}
+    .table th{background:#0e1b2e}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:13px; color:#d7e3ff}
+
+    .footer{color:#a8bbd8; border-top:1px dashed var(--line); margin-top:36px; padding:18px 0 32px; font-size:14px}
   </style>
 </head>
 <body>
-  <h1>LAEF – Edital 01/2025</h1>
-  <p>
-    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdgzasifQZ7gaUgx2MkQngU2A7cb2lch2U7fSVKSVWlZvnusw/viewform?usp=sharing&amp;ouid=114351594877777105919" target="_blank" rel="noopener">Inscreva-se (abre em nova aba)</a>
-  </p>
-  <p>
-    Link alternativo (texto simples):<br>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgzasifQZ7gaUgx2MkQngU2A7cb2lch2U7fSVKSVWlZvnusw/viewform?usp=sharing&amp;ouid=114351594877777105919">https://docs.google.com/forms/…/viewform</a>
-  </p>
+  <!-- HEADER -->
+  <header>
+    <div class="bar container">
+      <div class="logo">
+        <!-- Suba este arquivo para a raiz do repo com o nome laef-logo.jpg -->
+        <img alt="LAEF" src="laef-logo.jpg" onerror="this.style.display='none'">
+        <span>LAEF • ISB/UFAM</span>
+        <span class="pill">Edital 01/2025</span>
+      </div>
+      <div class="cta">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdgzasifQZ7gaUgx2MkQngU2A7cb2lch2U7fSVKSVWlZvnusw/viewform?usp=sharing&amp;ouid=114351594877777105919" target="_blank" rel="noopener">Inscreva-se</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>LAEF • Liga Acadêmica de Ensino de Física</h1>
+        <p>Processo Seletivo de Ligantes – Ano letivo de 2025</p>
+        <div class="badges">
+          <span class="badge">15 vagas + lista de espera</span>
+          <span class="badge">Inscrições: 06–17/out</span>
+          <span class="badge">Seleção: 24/out • 15h</span>
+          <span class="badge">Campus I • Sala de Reuniões</span>
+        </div>
+      </div>
+      <div class="emblem">
+        <img alt="Símbolo da LAEF" src="laef-logo.jpg"/>
+      </div>
+    </section>
+
+    <!-- INTRO + INSCRIÇÕES -->
+    <section class="grid">
+      <article class="card">
+        <h2>Disposições preliminares</h2>
+        <p>A LAEF, vinculada ao ISB/UFAM (Campus Coari), promove formação ampliada no ensino de Física por meio de ações de <strong>ensino, pesquisa e extensão</strong>, com ênfase em metodologias ativas, cultura maker e experimentação didática para a educação básica na Amazônia.</p>
+        <ul class="list">
+          <li><strong>Vagas:</strong> 15 (quinze), com <em>lista de espera</em> conforme classificação.</li>
+          <li><strong>Taxa:</strong> não há cobrança em nenhuma etapa.</li>
+        </ul>
+      </article>
+
+      <aside class="card">
+        <h2>Inscrições</h2>
+        <p>Período: <strong>06 a 17 de outubro de 2025</strong>.</p>
+        <p>
+          <a class="btn" style="margin-top:8px" href="https://docs.google.com/forms/d/e/1FAIpQLSdgzasifQZ7gaUgx2MkQngU2A7cb2lch2U7fSVKSVWlZvnusw/viewform?usp=sharing&amp;ouid=114351594877777105919" target="_blank" rel="noopener">Formulário de Inscrição</a>
+        </p>
+        <details style="margin-top:12px">
+          <summary>Documentos necessários</summary>
+          <ul class="list">
+            <li>Documento de identificação com foto;</li>
+            <li>Comprovante de matrícula ativa na UFAM;</li>
+            <li><strong>Carta de Intenção</strong> (modelo no fim da página).</li>
+          </ul>
+        </details>
+      </aside>
+    </section>
+
+    <!-- CRONOGRAMA -->
+    <section class="card" style="margin-top:18px">
+      <h2>Cronograma</h2>
+      <ul class="timeline">
+        <li class="tl"><strong>06–17/out/2025</strong> • Período de inscrições (on‑line).</li>
+        <li class="tl"><strong>20/out/2025</strong> • Homologação das inscrições.</li>
+        <li class="tl"><strong>24/out/2025 às 15h</strong> • Seleção presencial (Campus I, Sala de Reuniões).</li>
+        <li class="tl"><strong>27/out/2025</strong> • Resultado final (e‑mail e redes da LAEF).</li>
+        <li class="tl"><strong>Semana de 27/out</strong> • Assinatura do Termo de Compromisso (data a confirmar).</li>
+        <li class="tl"><strong>Nov/2025</strong> • Início das atividades.</li>
+      </ul>
+    </section>
+
+    <!-- ETAPA DE SELEÇÃO -->
+    <section class="card" style="margin-top:18px">
+      <h2>Etapa de seleção – apresentação prática (5 minutos)</h2>
+      <p>Cada candidato(a) deverá conduzir uma <strong>demonstração experimental</strong> de Física com <strong>materiais de baixo custo</strong>, em até <strong>5 minutos</strong>, explicando claramente:</p>
+      <ul class="list">
+        <li>Os <strong>conceitos físicos</strong> envolvidos e suas relações;</li>
+        <li>A <strong>adequação didática</strong> da proposta para o ensino básico;</li>
+        <li><strong>Desenvoltura e comunicação</strong> com o público;</li>
+        <li>Conhecimento inicial de <strong>metodologias de ensino experimental</strong> (UEPS, PBL, Ensino por Investigação, Peer Instruction).</li>
+      </ul>
+      <details>
+        <summary>Critérios de avaliação (0–10)</summary>
+        <table class="table" aria-label="barema de avaliação">
+          <thead><tr><th>Critério</th><th>Peso</th></tr></thead>
+          <tbody>
+            <tr><td>Clareza conceitual e correção física</td><td>0–3,0</td></tr>
+            <tr><td>Qualidade didática da demonstração (adequação, segurança e replicabilidade)</td><td>0–2,5</td></tr>
+            <tr><td>Desenvoltura, comunicação e gestão do tempo (5 min)</td><td>0–2,5</td></tr>
+            <tr><td>Referência a metodologias de ensino experimental</td><td>0–2,0</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:10px; color:var(--muted)">Desempate: maior nota geral → maior período no curso → sorteio.</p>
+      </details>
+    </section>
+
+    <!-- PARTICIPAÇÃO -->
+    <section class="grid" style="margin-top:18px">
+      <article class="card">
+        <h2>Participação e certificação</h2>
+        <ul class="list">
+          <li>Reuniões quinzenais, <strong>terças-feiras • 18h15–20h00</strong> (Campus I).</li>
+          <li>Participação nas ações de ensino e em pelo menos <strong>um projeto de extensão</strong>.</li>
+          <li><strong>75% de frequência</strong> mínima para certificação.</li>
+          <li>Certificados: participação geral na LAEF + participação em projeto de extensão (≥120h).</li>
+        </ul>
+      </article>
+      <aside class="card">
+        <h2>Contato</h2>
+        <p>E‑mail: <a href="mailto:laef.coari@ufam.edu.br">laef.coari@ufam.edu.br</a></p>
+        <p>Local: ISB/UFAM – Campus Coari (AM)</p>
+      </aside>
+    </section>
+
+    <!-- MODELOS -->
+    <section class="card" style="margin-top:18px">
+      <h2>Documentos e modelos</h2>
+      <details open>
+        <summary>Modelo de Carta de Intenção</summary>
+        <pre class="mono">Coari, ____ de __________________ de 2025
+
+À Coordenação da Liga Acadêmica de Ensino de Física (LAEF)
+
+Eu, ________________________________________________, matrícula nº __________________,
+aluno(a) do curso de __________________________________, manifesto meu interesse em participar
+como ligante da LAEF.
+
+Motivações e disponibilidade: _________________________________________________
+Experiências e relação com o ensino de Física: __________________________________
+Como posso contribuir com a LAEF: ____________________________________________
+
+Assinatura: __________________________________________</pre>
+      </details>
+    </section>
+
+    <section class="footer">
+      <p><strong>Disposições finais.</strong> A inscrição implica aceitação integral deste edital. Casos omissos serão resolvidos pela Coordenação da LAEF. Não há cobrança de taxas.</p>
+      <p>© 2025 LAEF • ISB/UFAM • Página estática para GitHub Pages.</p>
+    </section>
+  </main>
 </body>
 </html>
